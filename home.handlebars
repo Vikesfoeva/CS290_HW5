@@ -1,0 +1,43 @@
+<body>
+    <h1>The Server Home Page - Homework 5</h1>
+    <h2>Brandon Lenz</h2>
+    <h2>CS 290 Section 400</h2>
+    <br>
+    <div>
+        <h1>{{method}} Request Received</h1>
+        <table border="solid">
+            <h2>Parameters Received Via URL</h2>
+            <thead>
+                <tr>
+                    <th style="padding:3px">Key</th>
+                    <th style="padding:3px">Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each urlParams}}
+                <tr>
+                    <td style="padding:3px">{{this.name}}</td>
+                    <td style="padding:3px">{{this.value}}</td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+        <table border="solid">
+            <h2>Parameters Received Via Body</h2>
+            <thead>
+                <tr>
+                    <th style="padding:3px">Key</th>
+                    <th style="padding:3px">Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each body}}
+                <tr>
+                    <td style="padding:3px">{{this.name}}</td>
+                    <td style="padding:3px">{{this.value}}</td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+</body>
